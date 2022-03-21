@@ -6,7 +6,7 @@ const Loading = () => {
     const { css } = useFela()
     return (
         <div className={css(styles.loadingIcon)}>
-            <img src="loading.gif" />
+            <img alt="loading" src="loading.gif" />
         </div>
     )
 }

@@ -9,7 +9,7 @@ export type sportOptionsStateType = {
 }
 
 
-export default (state = initialState, action) => {
+const sportOptionsState = (state = initialState, action) => {
     switch (action.type) {
 
         case SET_SPORT:
@@ -22,3 +22,5 @@ export default (state = initialState, action) => {
             return state
     }
 }
+
+export default sportOptionsState

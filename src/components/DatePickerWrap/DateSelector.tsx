@@ -1,10 +1,10 @@
 import { DatePicker, LocalizationProvider } from '@mui/lab';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import { TextField } from '@mui/material';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
 import { formatDate, unformatDate } from '../../helpers/formatDate';
-import { setFormattedDate, setWeek } from '../../store/actions/dateAndWeek.actions';
+import { setFormattedDate } from '../../store/actions/dateAndWeek.actions';
 import { State } from '../../store/state.type';
 
 const DateSelector = ({ setFormattedDate, formattedDate }) => {

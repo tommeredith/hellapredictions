@@ -17,7 +17,7 @@ const ActionButton = ({ predictions, sport, createPreds, week, date, hasChecked,
             setMessage(`You wanna see what we got for that ${sport === 'nba' ? 'day' : 'week'}?`)
             setButtonText("Check for predictions")
         }
-    }, [hasChecked, predictions])
+    }, [hasChecked, predictions, sport])
 
     return predLoading ? <Loading /> : (
         <>

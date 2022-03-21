@@ -19,7 +19,7 @@ const PredictionTable = ({predictions, sport, week, date}) => {
                             
                             <div className="prediction__team team1">
                                 <div className='prediction__team__logo'>
-                                    <img src={`team_logos/${sport}/${LOGOS_NAME_MAP[sport][pred.team1]}.png`} />
+                                    <img alt={pred.team1} src={`team_logos/${sport}/${LOGOS_NAME_MAP[sport][pred.team1]}.png`} />
                                     <div className="team-name">{pred.team1}</div>
                                 </div>
                                 <div className="prediction__team__pred">
@@ -46,7 +46,7 @@ const PredictionTable = ({predictions, sport, week, date}) => {
                             )}
                             <div className="prediction__team team2">
                                 <div className="prediction__team__logo">
-                                    <img src={`team_logos/${sport}/${LOGOS_NAME_MAP[sport][pred.team2]}.png`} />
+                                    <img alt={pred.team2} src={`team_logos/${sport}/${LOGOS_NAME_MAP[sport][pred.team2]}.png`} />
                                     <div className="team-name">{pred.team2}</div>
                                 </div>
                                 <div className="prediction__team__pred">

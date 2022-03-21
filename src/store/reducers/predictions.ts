@@ -12,7 +12,7 @@ export type predictionsStateType = {
     loading: boolean
 }
 
-export default (state = initialState, action) => {
+const predictionsState = (state = initialState, action) => {
     switch (action.type) {
         case CREATE_PREDS_REQUEST:
         case CHECK_PREDS_EXIST_REQUEST:
@@ -46,3 +46,5 @@ export default (state = initialState, action) => {
             return state
     }
 }
+
+export default predictionsState
