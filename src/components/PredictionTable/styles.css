@@ -1,0 +1,58 @@
+
+.prediction {
+    width: 100%;
+    margin-bottom: 10px;
+    border-top: 3px solid #333;
+    padding-top: 10px;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.prediction.head {
+    border: none;
+    
+}
+
+.prediction__team {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.team-name {
+    font-size:12px;
+}
+
+.prediction__team div {
+    text-align: center;
+}
+.prediction__team div img {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.prediction__team__pred {
+    font-size:11px;
+    margin: 0 15px;
+}
+
+.pred-pct {
+    font-size:14px;
+    font-weight:bold;
+}
+
+.team2 {
+    flex-direction: row-reverse;
+}
+
+.draw {
+    display:block;
+    align-self: center;
+    font-size: 14px;
+}
+
+.draw .pred-pct{
+    margin-top: 10px;
+}
