@@ -13,3 +13,10 @@ export const SPORTS_WEEK_LENGTHS = {
     'nfl': 18,
     'ncaaf': 16
 }
+
+export const ACTIVE_SPORTS = {
+    'nba': true,
+    'epl': true,
+    'nfl': false,
+    'ncaaf': false
+}

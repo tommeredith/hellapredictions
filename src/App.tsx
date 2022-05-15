@@ -18,7 +18,7 @@ const App = () => {
 			<Provider store={store}>
 				
 				<main>
-					<h1>Hella Predictions, homie!</h1>
+					<h1>...splash that?</h1>
 					
 					<SportOptions />
 

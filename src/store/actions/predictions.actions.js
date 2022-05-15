@@ -13,7 +13,7 @@ export const [
 export const checkPredsExist = (sport, time) => dispatch => {
     dispatch(checkPredsExistRequest())
     console.log('=== time', time)
-    fetch('https://hellasportspredictions-api.herokuapp.com/check-day', {
+    fetch('http://tommeredith01.pythonanywhere.com/check-day', {
         method: 'POST', 
         body: JSON.stringify({
             sport,
@@ -42,7 +42,7 @@ export const [
 export const createPreds = (sport, time) => dispatch => {
     dispatch(createPredsRequest())
 
-    fetch('https://hellasportspredictions-api.herokuapp.com/preds/run', {
+    fetch('http://tommeredith01.pythonanywhere.com/preds/run', {
     	method: 'POST',
     	body: JSON.stringify({ 
     		sport,
