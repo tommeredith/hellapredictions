@@ -25,15 +25,6 @@ body {
   margin-bottom: 25px;
 }
 
-.sports div {
-  cursor: pointer;
-  padding: 10px 0px;
-  margin-right: 10px;
-  width: 100px;
-  text-align: center;
-  min-width: 60px;
-}
-
 main {
   padding: 30px;
 }
