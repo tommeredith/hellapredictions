@@ -15,7 +15,7 @@ export const styles = ({availSport, currentSport}) => ({
         border: '1px solid #4d4d4d',
 
         ...(
-            availSport === currentSport && activeState
+            availSport.name === currentSport && activeState
         ),
         
         ':hover': activeState

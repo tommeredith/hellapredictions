@@ -6,20 +6,19 @@ import { connect as connectStyles } from 'react-fela'
 import { styles } from './styles'
 import { connect } from 'react-redux'
 import { State } from '../../store/state.type'
-import { ACTIVE_SPORTS } from '../../constants/sports'
 
 const SportButton = ({availSport, currentSport, styles, setSport, wipePredictions}) => {
 
     return (
         <button  
             onClick={() => {
-                setSport(availSport)
+                setSport(availSport.name)
                 wipePredictions()
             }} 
             className={styles.button}
-            disabled={!ACTIVE_SPORTS[availSport]}
+            disabled={!availSport.isActive}
         >
-            {availSport.toUpperCase()}
+            {availSport.name.toUpperCase()}
         </button>
     )
 }

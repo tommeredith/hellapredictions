@@ -14,7 +14,7 @@ const ActionButton = ({ predictions, sport, createPreds, week, date, hasChecked,
             setMessage("Looks like there aren't predictions for this time yet. You wanna make 'em?")
             setButtonText("Create Predictions for Today")
         } else if (!hasChecked) {
-            setMessage(`You wanna see what we got for that ${sport === 'nba' ? 'day' : 'week'}?`)
+            setMessage(`You wanna see what we got for that ${SPORTS_DATE_TYPE[sport]}?`)
             setButtonText("Check for predictions")
         }
     }, [hasChecked, predictions, sport])

@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
 
 import { AVAILABLE_SPORTS } from '../../constants/sports'
+import { setSport } from '../../store/actions/sportOptions.actions'
 import SportButton from './SportButton'
 
 
-const SportOptions = () => {    
+const SportOptions = ({ setSport }) => {    
     
+    useEffect(() => {
+        setSport(AVAILABLE_SPORTS.find(sport => sport.isActive).name)
+    }, [])
+
     return (
         <div className="sports">
             {AVAILABLE_SPORTS.map((availSport, idx) => 
@@ -15,4 +21,9 @@ const SportOptions = () => {
     )
 }
 
-export default SportOptions
+export default connect(
+    null,
+    (dispatch: any) => ({
+        setSport: (sport) => dispatch(setSport(sport)),
+    })
+)(SportOptions)

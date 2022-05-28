@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { SOCCER_LEAGUES, SPORTS_DATE_TYPE } from '../../constants/sports'
 import { LOGOS_NAME_MAP } from '../../constants/teamLogos'
 import { unformatDate } from '../../helpers/formatDate'
 import { createPreds } from '../../store/actions/predictions.actions'
@@ -8,9 +9,11 @@ import './styles.css'
 
 const PredictionTable = ({predictions, sport, week, date}) => {
 
+    const isSoccer = SOCCER_LEAGUES.includes(sport)
+
     return (
         <>
-            {predictions.length > 0 && <h3>{sport === 'nba' ? `Predictions for ${unformatDate(date).toDateString()}` : `Week ${week} Predictions`}</h3>}
+            {predictions.length > 0 && <h3>{SPORTS_DATE_TYPE[sport] === 'date' ? `Predictions for ${unformatDate(date).toDateString()}` : `Week ${week} Predictions`}</h3>}
             {predictions.length > 0 ? (
                 <div>
 
@@ -31,7 +34,7 @@ const PredictionTable = ({predictions, sport, week, date}) => {
                                     </div>
                                 </div>
                             </div>
-                            {sport === 'epl' && (
+                            {isSoccer && (
                                 <div className="prediction__team draw">
                                     <div>
                                         Draw
